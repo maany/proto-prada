@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message Resource {
+  string guid = 1;
+  int32 page_number = 2;
+  int32 result_per_page = 3;
+  Resouce created_by
+  Url url
+  DATETIME created_at
+  enum type
+  bool enabled
+}

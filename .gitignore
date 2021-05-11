@@ -364,4 +364,4 @@ cython_debug/
 
 
 prada/.virtualenv
-prada/prada-py
+prada/interface

@@ -1,9 +1,9 @@
-from ref.service.base_services_pb2_grpc import ResourceManagerServicer
-class ResourceManager(ResourceManagerServicer):
-    def create_resource(self, resource):
-        print("Creating Resource")
-        return resource
-    
+from ref.base_services_pb2_grpc import ResourceManagerServicer
+from ref.base_models_pb2 import Resource
 
-if __name__ == "__main__":
-    ResourceManager.create_resource
+
+class ResourceManager(ResourceManagerServicer):
+
+    def create_resource(request, context):
+        print("Creating Resource ")
+        return request.guid

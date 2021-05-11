@@ -1,4 +1,17 @@
+attrs==21.2.0
 grpcio==1.37.1
+grpcio-testing==1.37.1
 grpcio-tools==1.37.1
+importlib-metadata==4.0.1
+iniconfig==1.1.1
+packaging==20.9
+pluggy==0.13.1
 protobuf==3.16.0
+py==1.10.0
+pyparsing==2.4.7
+pytest==6.2.4
+pytest-grpc==0.8.0
 six==1.16.0
+toml==0.10.2
+typing-extensions==3.10.0.0
+zipp==3.4.1

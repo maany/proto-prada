@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+package prada.core.model;
+
+
+// Resource represents the schema of a serializable entity in the PRADA ecosystem
+message Resource {
+  string guid = 1;
+  Resource created_by = 2;
+  google.protobuf.Timestamp created_at = 3;
+  string url = 4;
+  enum State {
+    STATE_UNKNOWN = 0;
+    STATE_URL_PENDING = 1;
+    STATE_OK = 2;
+  }
+  enum Type {
+    TYPE_UNKNOWN = 0;
+  }
+}

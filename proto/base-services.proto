@@ -1,0 +1,7 @@
+syntax = "proto3";
+package prada.core.service;
+
+import "base-models.proto";
+service ResourceManager {
+    rpc create_resource (prada.core.model.Resource) returns (prada.core.model.Resource) {};
+}

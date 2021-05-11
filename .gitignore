@@ -363,5 +363,12 @@ dmypy.json
 cython_debug/
 
 
+#VirtualEnv's
 prada/.virtualenv
-prada/interface
+
+# Generated Code
+prada/ref
+
+# IDE's
+.vscode
+.idea

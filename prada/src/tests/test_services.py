@@ -9,7 +9,7 @@ from src.service.resource_manager import ResourceManager
 @pytest.fixture(scope='module')
 def servicers():
     descriptors_to_servicers = {
-        base_services_pb2.DESCRIPTOR.services_by_name['ResourceManager']: ResourceManager
+        base_services_pb2.DESCRIPTOR.services_by_name['ResourceManager']: ResourceManager()
     }
     return descriptors_to_servicers
 
@@ -31,3 +31,4 @@ def test_create_resource(test_server):
         request=request, timeout=1)
     response, metadata, code, details = create_resource_method.termination()
     assert code == grpc.StatusCode.OK
+    assert response.guid == request.guid
